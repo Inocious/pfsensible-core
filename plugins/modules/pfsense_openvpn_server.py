@@ -93,7 +93,7 @@ options:
     default: false
     type: bool
   remote_cert_tls:
-    description: Enforce that only hosts with a client certificate can connect (EKU: "TLS Web Client Authentication").
+    description: Enforce that only hosts with a client certificate can connect (EKU: TLS Web Client Authentication).
     default: false
     type: bool
   shared_key:
