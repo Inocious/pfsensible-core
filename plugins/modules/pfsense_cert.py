@@ -347,11 +347,8 @@ class PFSenseCertModule(PFSenseModuleBase):
                     require_once('certs.inc');
                     $certent = lookup_cert('{refid}');
                     $cert = $certent['item'];
-
                     cert_import($cert, '{cert}', '{key}');
-
                     config_set_path("cert/{{$certent['idx']}}", $cert);
-
                     $savemsg = sprintf(gettext("Imported certificate %s"), $cert['descr']);
                     write_config($savemsg);
                     cert_restart_services(cert_get_all_services('{refid}'));
